@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "Oficina | Gestão de serviços",
+  "short_name": "Oficina",
+  "description": "Gestão de ordens de serviço, clientes, equipamentos e estoque.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f5f7fa",
+  "theme_color": "#10233f",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
