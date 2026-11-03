@@ -24,7 +24,7 @@ Não é necessário compilar nem instalar dependências para publicar o site est
 
 O modo de demonstração guarda os dados no armazenamento local do navegador. Os dados não são enviados ao GitHub. Para usar uma base compartilhada com autenticação:
 
-1. Crie um projeto no Supabase e execute `supabase/schema.sql` no SQL Editor.
+1. Crie um projeto no Supabase e execute `schema.sql` no SQL Editor.
 2. Crie um usuário em **Authentication → Users** e associe seu UUID a um perfil `admin`, conforme o exemplo abaixo. Use um UUID novo para a empresa.
 
    ```sql
@@ -33,6 +33,8 @@ O modo de demonstração guarda os dados no armazenamento local do navegador. Os
    ```
 
 3. No app, abra **Configurações** e informe a URL do projeto e a chave pública `anon`/`publishable`.
+
+Para uma instalação Supabase existente, execute `migration_client_identity.sql` no SQL Editor. A migração numera os clientes já cadastrados e ativa a proteção contra CPF/CNPJ repetido e a geração automática dos próximos códigos.
 
 Nunca publique uma chave `service_role`, senha ou arquivo `.env` no repositório. A chave pública foi feita para uso no navegador; mantenha as políticas RLS do schema habilitadas. Usuários adicionais precisam de perfil com o mesmo `company_id` e papel adequado.
 

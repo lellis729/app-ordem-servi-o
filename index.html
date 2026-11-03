@@ -6,6 +6,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>.duplicate-backdrop{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:20px;background:#0d1d33b8;backdrop-filter:blur(3px)}.duplicate-message{width:min(420px,100%);padding:28px 26px 24px;border-radius:14px;background:#fff;text-align:center;box-shadow:0 24px 80px #0b1c3550;animation:appear .18s ease}.duplicate-icon{display:grid;place-items:center;width:42px;height:42px;margin:0 auto 14px;border-radius:50%;background:#fff0f0;color:#c84c4c;font-size:24px;font-weight:700}.duplicate-message h2{margin:0 0 9px;color:#1d304a;font:800 20px Manrope,sans-serif}.duplicate-message p{margin:0 0 21px;color:#65748a;font-size:13px;line-height:1.5}</style>
+  <style>.duplicate-message .duplicate-field{margin:12px 0 0;text-align:left}.duplicate-field strong,.duplicate-field span{display:block}.duplicate-field strong{color:#526177;font-size:12px}.duplicate-field span{margin-top:3px;color:#1d304a;font-size:14px;font-weight:700}.duplicate-message .button{margin-top:22px}</style>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
 </head>
@@ -37,5 +39,6 @@
   </main>
 </div>
 <div class="modal-backdrop hidden" id="modal-backdrop"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-head"><div><p class="eyebrow" id="modal-eyebrow">CADASTRO</p><h2 id="modal-title">Novo registro</h2></div><button class="icon-button" id="modal-close" aria-label="Fechar">×</button></div><div id="modal-body"></div></section></div>
+<div class="duplicate-backdrop hidden" id="duplicate-backdrop" role="alertdialog" aria-modal="true" aria-labelledby="duplicate-title"><section class="duplicate-message"><span class="duplicate-icon">!</span><h2 id="duplicate-title">Cliente já cadastrado</h2><p class="duplicate-field"><strong>Código do cliente:</strong><span id="duplicate-code"></span></p><p class="duplicate-field"><strong>Nome do cliente:</strong><span id="duplicate-name"></span></p><button class="button primary" id="duplicate-close">Entendi</button></section></div>
 <script src="app.js"></script><script src="pwa.js" defer></script>
 </body></html>
