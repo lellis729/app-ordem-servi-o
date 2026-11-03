@@ -1,5 +1,5 @@
 const CACHE = 'oficina-app-v1';
-const CORE = ['./', './index.html', './manifest.webmanifest', './src/styles.css', './src/app.js', './src/pwa.js', './icons/icon.svg'];
+const CORE = ['./', './index.html', './manifest.webmanifest', './styles.css', './app.js', './pwa.js', './icon.svg'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)).then(() => self.skipWaiting()));
 });
